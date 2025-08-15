@@ -1,413 +1,358 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-  <!-- meta -->
-  <meta charset="utf-8">
-  <title>Laxmi Narayan Yadav — Web Creator • IT Officer • IT Supplier</title>
-  <meta name="description" content="Computer Engineer & IT Officer delivering modern websites, municipal IT solutions, and verified IT procurement across Nepal.">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laxmi Narayan Yadav — Portfolio & Services</title>
+  <meta name="description" content="Official portfolio of Laxmi Narayan Yadav — Computer Engineer, Information Technology Officer at Mithila Bihari Municipality, web creator & IT items supplier." />
+  <meta property="og:title" content="Laxmi Narayan Yadav — Portfolio & Services" />
+  <meta property="og:description" content="Computer Engineer • IT Officer • Web Creator • IT Items Supplier" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://laxminarayanyadav.com.np" />
+  <meta name="theme-color" content="#0ea5e9">
 
-  <!-- styles (from Lhander) -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <!-- scripts (from Lhander) -->
-  <script src="js/modernizr.js"></script>
+  <!-- Tailwind CSS (CDN build; perfect for GitHub Pages) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#effaff',
+              100: '#dff4ff',
+              200: '#bae9ff',
+              300: '#7cd9ff',
+              400: '#38c7ff',
+              500: '#0ea5e9',
+              600: '#0b83bb',
+              700: '#10688f',
+              800: '#134f6e',
+              900: '#133f58',
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Nice underline */
+    .link-underline { background-image: linear-gradient(currentColor,currentColor); background-size: 0% 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease; }
+    .link-underline:hover { background-size: 100% 2px; }
+    /* Progress bar for scroll */
+    #scrollbar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #38c7ff, #0ea5e9); z-index: 50; width: 0; }
+  </style>
 </head>
-<body id="top">
+<body class="text-slate-800 antialiased bg-white selection:bg-brand-200 selection:text-slate-900">
+  <!-- Scroll progress bar -->
+  <div id="scrollbar"></div>
 
-  <!-- header ================================================== -->
-  <header id="main-header">
-    <div class="row">
-      <div class="logo"><a href="#top">LY</a></div>
-
-      <nav id="nav-wrap">
-        <ul id="nav" class="nav">
-          <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-          <li><a class="smoothscroll" href="#about">About</a></li>
-          <li><a class="smoothscroll" href="#features">Services</a></li>
-          <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
-          <li><a class="smoothscroll" href="#pricing">Bundles</a></li>
-          <li><a class="smoothscroll" href="#contact">Contact</a></li>
-          <li class="highlight with-sep"><a class="smoothscroll" href="#contact">Request a Quote</a></li>
-        </ul>
-      </nav>
-
-      <a class="menu-toggle" href="#"><span>Menu</span></a>
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2">
+          <img src="assets/logo.png" onerror="this.style.display='none'" alt="Logo" class="h-8 w-8" />
+          <span class="font-semibold tracking-tight">Laxmi Narayan Yadav</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#about" class="hover:text-brand-700 link-underline">About</a>
+          <a href="#experience" class="hover:text-brand-700 link-underline">Experience</a>
+          <a href="#services" class="hover:text-brand-700 link-underline">Services</a>
+          <a href="#projects" class="hover:text-brand-700 link-underline">Projects</a>
+          <a href="#contact" class="hover:text-brand-700 link-underline">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 hover:bg-slate-50" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="#about" class="py-2">About</a>
+        <a href="#experience" class="py-2">Experience</a>
+        <a href="#services" class="py-2">Services</a>
+        <a href="#projects" class="py-2">Projects</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
     </div>
   </header>
 
-  <!-- hero / intro ================================================== -->
-  <section id="home">
-    <div class="shadow-overlay"></div>
-
-    <div class="home-content-table">
-      <div class="home-content-tablecell">
-        <div class="row">
-          <div class="col-twelve">
-
-            <div class='video-link'>
-              <a href="#video-popup"><img src="images/play-button.png" alt=""></a>
-            </div>
-
-            <h5>Computer Engineer • IT Officer — Mithila Bihari Municipality</h5>
-            <h1>Web Creator & IT Items Supplier for Organizations and Offices</h1>
-
-            <div class="more">
-              <a class="smoothscroll button stroke" href="#contact">Start a Project</a>
-              <a class="smoothscroll button" href="#portfolio">View Work</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- hero modal video -->
-    <div id="video-popup" class="popup-modal mfp-hide">
-      <div class="fluid-video-wrapper">
-        <iframe src="https://player.vimeo.com/video/14592941?color=00a650" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-      <a class="close-popup">Close</a>
-    </div>
-  </section>
-
-  <!-- about ================================================== -->
-  <section id="about">
-    <div class="row section-intro">
-      <div class="col-twelve with-bottom-line">
-        <h5>About</h5>
-        <h1>Let me introduce myself.</h1>
-        <p class="lead">I am Laxmi Narayan Yadav, Computer Engineer and currently Information Technology Officer at Mithila Bihari Municipality. I build modern, secure websites and provide end‑to‑end IT procurement with transparent documentation, warranty handling, and on‑time delivery.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- features / services ================================================== -->
-  <section id="features">
-    <div class="row section-intro">
-      <div class="col-twelve with-bottom-line">
-        <h5>Services</h5>
-        <h1>Modern web & municipal IT services.</h1>
-        <p class="lead">From responsive websites to office automation and verified IT supply — I help organizations run efficiently and securely.</p>
-      </div>
-    </div>
-
-    <div class="row features-content">
-      <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
-
-        <div class="bgrid feature">
-          <span class="icon"><i class="icon-window"></i></span>
-          <div class="service-content">
-            <h3 class="h05">Website Creation</h3>
-            <p>Portfolio & business sites with responsive UI, accessibility, SEO (schema), and analytics. Tech: HTML/CSS/JS, React/Next.js, WordPress when needed, Cloudflare/GitHub Pages hosting.</p>
-          </div>
-        </div>
-
-        <div class="bgrid feature">
-          <span class="icon"><i class="icon-desktop"></i></span>
-          <div class="service-content">
-            <h3 class="h05">Municipal IT & e‑Governance</h3>
-            <p>Networking, server sizing, Active Directory, backups, email/DNS, e‑attendance, inventory, and digital forms tailored for local government workflows.</p>
-          </div>
-        </div>
-
-        <div class="bgrid feature">
-          <span class="icon"><i class="icon-clipboard"></i></span>
-          <div class="service-content">
-            <h3 class="h05">IT Procurement & Supply</h3>
-            <p>3‑vendor quote comparison, compliance spec sheets, delivery across Nepal, and warranty handling for laptops, servers, networking, and licenses.</p>
-          </div>
-        </div>
-
-        <div class="bgrid feature">
-          <span class="icon"><i class="icon-layers"></i></span>
-          <div class="service-content">
-            <h3 class="h05">Performance & Security</h3>
-            <p>Lighthouse 90+ sites, HTTPS/TLS, hardening, backups, least‑privilege access, and documentation for maintainability.</p>
-          </div>
-        </div>
-
-        <div class="bgrid feature">
-          <span class="icon"><i class="icon-cloud"></i></span>
-          <div class="service-content">
-            <h3 class="h05">Cloud & Email</h3>
-            <p>GSuite/Workspace setup, DNS, SPF/DKIM/DMARC, cloud storage and simple SSO so teams can collaborate safely.</p>
-          </div>
-        </div>
-
-        <div class="bgrid feature">
-          <span class="icon"><i class="icon-shield"></i></span>
-          <div class="service-content">
-            <h3 class="h05">Support & Training</h3>
-            <p>Helpdesk, user training, and SOPs to keep systems reliable. Post‑deployment support options available.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- portfolio / projects ================================================== -->
-  <section id="portfolio">
-    <div class="row section-intro">
-      <div class="col-twelve with-bottom-line">
-        <h5>Projects</h5>
-        <h1>Some of my recent work.</h1>
-        <p class="lead">A glimpse of sites and IT deployments. (Replace with your real screenshots.)</p>
-      </div>
-    </div>
-
-    <div class="row portfolio-content">
-      <div class="col-twelve">
-        <div id="folio-wrapper" class="block-1-3 block-m-1-2 block-mob-full stack">
-
-          <div class="bgrid folio-item">
-            <div class="item-wrap">
-              <img src="images/portfolio/portfolio-1.jpg" alt="Municipal Portal">
-              <a href="#modal-01" class="overlay">
-                <div class="folio-item-table"><div class="folio-item-cell"><h3 class="folio-title">Municipal Service Portal</h3><span class="folio-types">Next.js • SSO • PostgreSQL</span></div></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="bgrid folio-item">
-            <div class="item-wrap">
-              <img src="images/portfolio/portfolio-2.jpg" alt="Company Website">
-              <a href="#modal-02" class="overlay">
-                <div class="folio-item-table"><div class="folio-item-cell"><h3 class="folio-title">Company Website Template</h3><span class="folio-types">Static • Schema • 95+ Score</span></div></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="bgrid folio-item">
-            <div class="item-wrap">
-              <img src="images/portfolio/portfolio-3.jpg" alt="IT Procurement Dashboard">
-              <a href="#modal-03" class="overlay">
-                <div class="folio-item-table"><div class="folio-item-cell"><h3 class="folio-title">IT Procurement Dashboard</h3><span class="folio-types">Dash • Specs • Warranty</span></div></div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Modals -->
-          <div id="modal-01" class="popup-modal slider mfp-hide">
-            <div class="media">
-              <img src="images/portfolio/modals/m-portfolio-1.jpg" alt="" />
-            </div>
-            <div class="description-box">
-              <h4>Municipal Service Portal</h4>
-              <p>Citizen services, grievance tracking, and permit workflows. Secured behind reverse proxy and SSO.</p>
-              <div class="categories">Next.js • PostgreSQL • Keycloak</div>
-            </div>
-            <div class="link-box"><a href="#" class="popup-modal-dismiss">Close</a></div>
-          </div>
-
-          <div id="modal-02" class="popup-modal slider mfp-hide">
-            <div class="media"><img src="images/portfolio/modals/m-portfolio-2.jpg" alt="" /></div>
-            <div class="description-box">
-              <h4>Company Website Template</h4>
-              <p>High‑performance static site with schema markup. Ideal for service businesses and consultants.</p>
-              <div class="categories">HTML • Cloudflare • GitHub Pages</div>
-            </div>
-            <div class="link-box"><a href="#" class="popup-modal-dismiss">Close</a></div>
-          </div>
-
-          <div id="modal-03" class="popup-modal slider mfp-hide">
-            <div class="media"><img src="images/portfolio/modals/m-portfolio-3.jpg" alt="" /></div>
-            <div class="description-box">
-              <h4>IT Procurement Dashboard</h4>
-              <p>Specs, quote comparison, and warranty tracking for office IT supply.</p>
-              <div class="categories">Sheets • Forms • Docs</div>
-            </div>
-            <div class="link-box"><a href="#" class="popup-modal-dismiss">Close</a></div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- pricing (repurposed as bundles) ===================================== -->
-  <section id="pricing">
-    <div class="row section-intro">
-      <div class="col-twelve with-bottom-line">
-        <h5>IT Supply Bundles</h5>
-        <h1>Pre‑configured office & server bundles.</h1>
-        <p class="lead">Popular configurations — customizable on request. Prices on RFQ.</p>
-      </div>
-    </div>
-
-    <div class="row pricing-content">
-      <div class="pricing-tables block-1-3 group">
-
-        <div class="bgrid">
-          <div class="price-block">
-            <div class="top-part">
-              <h3 class="plan-title">Office Starter</h3>
-              <p class="plan-price">On RFQ</p>
-              <p class="price-month">Laptop + Printer + Wi‑Fi AP</p>
-            </div>
-            <div class="bottom-part">
-              <ul class="features">
-                <li>Core i5 laptop (business series)</li>
-                <li>Network printer</li>
-                <li>802.11ac access point</li>
-                <li>Setup & email/DNS</li>
-              </ul>
-              <a class="button large smoothscroll" href="#contact">Get Quote</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="bgrid">
-          <div class="price-block primary">
-            <div class="top-part">
-              <h3 class="plan-title">Server Room</h3>
-              <p class="plan-price">On RFQ</p>
-              <p class="price-month">Rack + UPS + Switch + Firewall</p>
-            </div>
-            <div class="bottom-part">
-              <ul class="features">
-                <li>Rack enclosure + PDU</li>
-                <li>Online UPS</li>
-                <li>Managed PoE switch</li>
-                <li>UTM firewall</li>
-              </ul>
-              <a class="button large smoothscroll" href="#contact">Get Quote</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="bgrid">
-          <div class="price-block">
-            <div class="top-part">
-              <h3 class="plan-title">Smart Office</h3>
-              <p class="plan-price">On RFQ</p>
-              <p class="price-month">Attendance + Email + Backup</p>
-            </div>
-            <div class="bottom-part">
-              <ul class="features">
-                <li>Biometric attendance</li>
-                <li>Workspace email (SPF/DKIM/DMARC)</li>
-                <li>Automated backups</li>
-                <li>User training & SOPs</li>
-              </ul>
-              <a class="button large smoothscroll" href="#contact">Get Quote</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- faq / cta ================================================== -->
-  <section id="cta">
-    <div class="row cta-content">
-      <div class="col-twelve">
-        <h1 class="h01">Ready to start? Request a quote today.</h1>
-        <p class="lead">Send your BOQ/specs or describe your project. I’ll respond with a clear plan and timeline.</p>
-        <a class="button large smoothscroll" href="#contact">Request a Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- contact ================================================== -->
-  <section id="contact">
-    <div class="row section-intro">
-      <div class="col-twelve with-bottom-line">
-        <h5>Contact</h5>
-        <h1>Let’s work together.</h1>
-        <p class="lead">Email is best — include any requirements, quantities, or deadlines.</p>
-      </div>
-    </div>
-
-    <div class="row contact-content">
-      <div class="col-seven tab-full">
-        <h5>Send a message</h5>
-        <form name="contactForm" id="contactForm" method="post" action="#">
-          <fieldset>
-            <div class="form-field">
-              <input name="contactName" type="text" id="contactName" placeholder="Name" minlength="2" required>
-            </div>
-            <div class="form-field">
-              <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" required>
-            </div>
-            <div class="form-field">
-              <input name="contactSubject" type="text" id="contactSubject" placeholder="Organization / Subject">
-            </div>
-            <div class="form-field">
-              <textarea name="contactMessage" id="contactMessage" placeholder="Project brief or items required" rows="10" required></textarea>
-            </div>
-            <div class="form-field">
-              <button class="submitform">Send</button>
-              <div id="submit-loader"><div class="text-loader">Sending...</div><div class="s-loader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
-            </div>
-          </fieldset>
-        </form>
-
-        <div id="message-warning"></div>
-        <div id="message-success"><i class="fa fa-check"></i>Your message was sent, thank you!<br></div>
-      </div>
-
-      <div class="col-four tab-full collapse">
-        <div class="icon"><i class="icon-mail"></i></div>
-        <h5>Email</h5>
-        <p>hello@laxminarayanyadav.com.np</p>
-        <div class="icon"><i class="icon-map-pin"></i></div>
-        <h5>Location</h5>
-        <p>Dhanusha, Madhesh Province, Nepal</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- footer ================================================== -->
-  <footer>
-    <div class="footer-main">
-      <div class="row">
-        <div class="col-four tab-full footer-info">
-          <div class="footer-logo"></div>
-          <p>
-            © <span id="y"></span> Laxmi Narayan Yadav. All rights reserved.<br>
-            Design by <a href="https://www.styleshout.com/">StyleShout</a>
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-100 via-white to-brand-50"></div>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative grid md:grid-cols-2 items-center gap-12 py-20 md:py-28">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3 py-1 text-xs text-brand-700 shadow-soft">Computer Engineer • IT Officer • Web Creator</span>
+          <h1 class="mt-5 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+            Building reliable digital solutions for <span class="text-brand-700">municipalities</span> & organizations
+          </h1>
+          <p class="mt-5 text-slate-600 text-lg">
+            Information Technology Officer at <span class="font-semibold">Mithila Bihari Municipality</span>; also offering professional <span class="font-semibold">Website Creation</span> and <span class="font-semibold">IT Items Supply</span> services.
           </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 shadow-soft">
+              <i data-lucide="mail"></i>
+              Contact Me
+            </a>
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-3 hover:bg-slate-50">
+              <i data-lucide="layout"></i>
+              View Projects
+            </a>
+            <a href="assets/CV.pdf" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-3 hover:bg-slate-50" download>
+              <i data-lucide="download"></i>
+              Download CV
+            </a>
+          </div>
         </div>
-        <div class="col-four tab-full footer-info">
-          <h4>Quick Links</h4>
-          <ul class="list-links">
-            <li><a class="smoothscroll" href="#about">About</a></li>
-            <li><a class="smoothscroll" href="#features">Services</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
-            <li><a class="smoothscroll" href="#pricing">Bundles</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+        <div class="relative">
+          <div class="aspect-square rounded-3xl bg-white border border-slate-200 shadow-soft overflow-hidden">
+            <img src="assets/profile.jpg" alt="Laxmi Narayan Yadav" class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white border border-slate-200 rounded-2xl p-4 shadow-soft">
+            <p class="text-sm text-slate-600">Available for freelance web projects & IT supply</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-1">
+          <h2 class="text-3xl font-bold tracking-tight">About</h2>
+          <p class="mt-3 text-slate-600">A concise summary about you. <span class="font-medium">Replace this block with the exact information already on your current website</span> (same wording), simply pasted here for better presentation.</p>
+        </div>
+        <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i data-lucide="badge-check" class="text-brand-600"></i>
+              <h3 class="font-semibold">Qualifications</h3>
+            </div>
+            <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+              <li>Computer Engineering — <em>(paste your exact degree details)</em></li>
+              <li>Certifications — <em>(paste unchanged list)</em></li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i data-lucide="map-pin" class="text-brand-600"></i>
+              <h3 class="font-semibold">Based In</h3>
+            </div>
+            <p class="mt-3 text-slate-600 text-sm">Tarapatti, Dhanusha, Madhesh Province, Nepal</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i data-lucide="target" class="text-brand-600"></i>
+              <h3 class="font-semibold">Focus Areas</h3>
+            </div>
+            <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+              <li>Municipal ICT Systems</li>
+              <li>Web Design & Hosting</li>
+              <li>IT Procurement & Supply</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="text-brand-600"></i>
+              <h3 class="font-semibold">Contact</h3>
+            </div>
+            <p class="mt-3 text-slate-600 text-sm">Email/Phone as per your current site (unchanged).
+              <br><span class="text-xs">(Update in footer & contact form too.)</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold tracking-tight">Experience</h2>
+      <div class="mt-10 grid gap-6">
+        <!-- Timeline item -->
+        <div class="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-soft">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+              <i data-lucide="building-2"></i>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-semibold">Information Technology Officer</h3>
+                <span class="text-xs px-2 py-1 bg-slate-100 rounded">Current</span>
+              </div>
+              <p class="text-slate-600 text-sm">Mithila Bihari Municipality, Tarapatti, Dhanusha</p>
+              <ul class="mt-2 text-slate-600 text-sm list-disc ml-5">
+                <li>Responsibilities — <em>paste your exact lines here</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Add more timeline items below keeping your exact text -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold tracking-tight text-center">Services</h2>
+      <p class="mt-3 text-slate-600 text-center">Your service descriptions remain unchanged; just paste the same content into these cards.</p>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <i data-lucide="chrome" class="text-brand-600"></i>
+          <h3 class="mt-3 font-semibold">Website Creation</h3>
+          <p class="mt-2 text-sm text-slate-600">(Paste your exact service text)</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <i data-lucide="server" class="text-brand-600"></i>
+          <h3 class="mt-3 font-semibold">Hosting & Maintenance</h3>
+          <p class="mt-2 text-sm text-slate-600">(Paste unchanged details)</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <i data-lucide="shopping-bag" class="text-brand-600"></i>
+          <h3 class="mt-3 font-semibold">IT Items Supply</h3>
+          <p class="mt-2 text-sm text-slate-600">(Paste unchanged list / brands)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Portfolio -->
+  <section id="projects" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-3xl font-bold tracking-tight">Projects</h2>
+        <a href="#contact" class="text-sm link-underline">Want something similar?</a>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card template -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="assets/project-1.jpg" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition" />
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold">Project Title</h3>
+            <p class="mt-1 text-sm text-slate-600">(Paste the exact description from your site)</p>
+            <div class="mt-3 flex gap-3 text-xs text-slate-500">
+              <span class="px-2 py-1 bg-slate-100 rounded">HTML</span>
+              <span class="px-2 py-1 bg-slate-100 rounded">CSS</span>
+            </div>
+          </div>
+        </article>
+        <!-- Duplicate for more projects -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (optional; keep your same quotes) -->
+  <section id="testimonials" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold tracking-tight text-center">What Clients Say</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="rounded-2xl border border-slate-200 p-6 shadow-soft bg-white">
+          <blockquote class="text-slate-700">“(Paste the same testimonial text.)”</blockquote>
+          <figcaption class="mt-3 text-sm text-slate-500">— Client Name, Organization</figcaption>
+        </figure>
+        <!-- Add more as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">Contact</h2>
+          <p class="mt-3 text-slate-600">Use the form or email me directly. Replace with your exact current contact details.</p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex items-center gap-3"><i data-lucide="mail"></i> <a class="link-underline" href="mailto:hello@laxminarayanyadav.com.np">hello@laxminarayanyadav.com.np</a></li>
+            <li class="flex items-center gap-3"><i data-lucide="phone"></i> <a class="link-underline" href="tel:+977-9800000000">+977-9800000000</a></li>
+            <li class="flex items-center gap-3"><i data-lucide="map-pin"></i> Tarapatti, Dhanusha, Madhesh, Nepal</li>
           </ul>
         </div>
-        <div class="col-four tab-full footer-info">
-          <h4>Contact</h4>
-          <p>Email: <a href="mailto:hello@laxminarayanyadav.com.np">hello@laxminarayanyadav.com.np</a><br>Location: Dhanusha, Madhesh Province, Nepal</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="row">
-        <div class="col-twelve">
-          <div class="copyright">
-            <span>© <span id="y2"></span> Laxmi Narayan Yadav</span>
-            <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+        <form action="mailto:hello@laxminarayanyadav.com.np" method="post" enctype="text/plain" class="rounded-2xl border border-slate-200 p-6 shadow-soft bg-white">
+          <div class="grid gap-4">
+            <div>
+              <label class="block text-sm font-medium">Your Name</label>
+              <input required type="text" name="name" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-300" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Email</label>
+              <input required type="email" name="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-300" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Message</label>
+              <textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-300"></textarea>
+            </div>
+            <button class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700">
+              <i data-lucide="send"></i>
+              Send Message
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
+  </section>
 
-    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a></div>
+  <!-- Footer -->
+  <footer class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <h3 class="font-semibold">Laxmi Narayan Yadav</h3>
+          <p class="text-sm text-slate-600 mt-2">Computer Engineer • Information Technology Officer • Web Creator • IT Items Supplier</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Quick Links</h4>
+          <ul class="mt-2 text-sm text-slate-600 space-y-1">
+            <li><a href="#about" class="link-underline">About</a></li>
+            <li><a href="#services" class="link-underline">Services</a></li>
+            <li><a href="#projects" class="link-underline">Projects</a></li>
+            <li><a href="#contact" class="link-underline">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Get In Touch</h4>
+          <p class="text-sm text-slate-600 mt-2">Email: <a href="mailto:hello@laxminarayanyadav.com.np" class="link-underline">hello@laxminarayanyadav.com.np</a><br> Phone: <a href="tel:+977-9800000000" class="link-underline">+977-9800000000</a></p>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-slate-500">© <span id="year"></span> laxminarayanyadav.com.np • All rights reserved.</div>
+    </div>
   </footer>
 
-  <!-- scripts ================================================== -->
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();document.getElementById('y2').textContent=new Date().getFullYear();</script>
+  <script>
+    // Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Scroll progress bar
+    const bar = document.getElementById('scrollbar');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = docHeight ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = progress + '%';
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
